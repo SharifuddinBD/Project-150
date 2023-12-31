@@ -1,15 +1,12 @@
+SHAHJALAL UNIVERSITY of SCIENCE AND TECHNOLOGY
 
+Session: 2021-22
 
-# SHAHAJALAL UNIVERSITY of SCIENCE AND TECHNOLOGY
+Department: Computer Science and Engineering
 
-## Session: 2021-22
+Course Title: Project 150.
 
-## Department: Computer Science and Engineering
-
-### Course Title: Project 150.
-
-
-# Game Name: MULTIPLE GAME
+Game Name: MULTIPLE GAME
 
 Description:
 
