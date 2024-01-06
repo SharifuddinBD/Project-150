@@ -8,7 +8,7 @@ Course Title: Project 150.
 
 Game Name: MULTIPLE GAME
 
-Description:
+<b> Description: </b>
 
 In this project, we work on various kinds of games, specifically focusing on children to enrich their knowledge and thinking capability. 
 1.Tic-Tac-Toe:
