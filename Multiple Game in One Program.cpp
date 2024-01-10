@@ -668,7 +668,7 @@ int main()
             char PlayGround[109]; //0,1-100,NULL+Primary body Size(5)+Extra some for avoid silly risk
 
             cout << "\t\t\t\t\t\tSNAKE GAME [Classic](10x10)\n\n";
-            cout<<"#Introduction : Here your target is eat more Fruit to Increase Score. The Snake's Size is increasing according to eat Fruit. If the Snake Bites its Body then the Game is Over.If Score=100, then the Game will be Completed. You should Choice Level according to Snake's Speed.\n\n";
+            cout<<"#Introduction : Here your target is eat more Fruit to Increase Score. The Snake's Size is increasing according to eat Fruit. If the Snake Bites its Body then the Game is Over.If Score=100, then the Game will be Completed. You should Choice Level according to Snake's Speed.Control by Up_Down_Left_Rigt key\n\n";
 
             cout<< "LEVEL (1-10) :  ";
             cin>>Level;
