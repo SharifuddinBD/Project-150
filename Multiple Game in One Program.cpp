@@ -1278,20 +1278,6 @@ int main()
                 if(Score == 100)    break;              ///Sob fruit gulo khele Game Over & Highest Score hobe
                 if(Temp == -1)      goto pac_start;     ///jodi pacman er life kome jay, tobe sobar possition reform hobe
 
-
-                for(i=0;i<Number_of_Enemy;i++)
-                {
-                    if      (Enemy[i] /10 - PacMan/10 > 0) Enemy[i] -=10; ///Jodi Ghost er RowNumber Amar RowNumber theke BESHI hoy, tobe tar RowNumber Kombe & Amar Nikote asbe
-                    else if (Enemy[i] /10 - PacMan/10 < 0) Enemy[i] +=10; ///Jodi Ghost er RowNumber Amar RowNumber theke KOM   hoy, tobe tar RowNumber Barbe & Amar Nikote asbe
-                                                                          ///R Same RowNumber hole No Change
-
-                    if      (Enemy[i] %10 - PacMan%10 > 0) Enemy[i] --;   ///Jodi Ghost er Column Number Amar Column Number theke BESHI hoy,tobe tar Column Number Kombe & Amar Nikote asbe
-                    else if (Enemy[i] %10 - PacMan%10 < 0) Enemy[i] ++;   ///Jodi Ghost er Column Number Amar Column Number theke  KOM  hoy,tobe tar Column Number Barbe & Amar Nikote asbe
-                                                                          ///R Same Column Number hole No Change
-
-    //                if(Enemy[i] /10 - PacMan/10 > Enemy[i] %10 - PacMan%10)
-                }
-
                 if (kbhit())
                 {
                             key = getch();
@@ -1313,6 +1299,18 @@ int main()
                                 Move='6';
 
                             else continue;
+                }
+
+                for(i=0;i<Number_of_Enemy;i++)
+                {
+                    if      (Enemy[i] /10 - PacMan/10 > 0) Enemy[i] -=10; ///Jodi Ghost er RowNumber Amar RowNumber theke BESHI hoy, tobe tar RowNumber Kombe & Amar Nikote asbe
+                    else if (Enemy[i] /10 - PacMan/10 < 0) Enemy[i] +=10; ///Jodi Ghost er RowNumber Amar RowNumber theke KOM   hoy, tobe tar RowNumber Barbe & Amar Nikote asbe
+                                                                          ///R Same RowNumber hole No Change
+
+                    if      (Enemy[i] %10 - PacMan%10 > 0) Enemy[i] --;   ///Jodi Ghost er Column Number Amar Column Number theke BESHI hoy,tobe tar Column Number Kombe & Amar Nikote asbe
+                    else if (Enemy[i] %10 - PacMan%10 < 0) Enemy[i] ++;   ///Jodi Ghost er Column Number Amar Column Number theke  KOM  hoy,tobe tar Column Number Barbe & Amar Nikote asbe
+                                                                          ///R Same Column Number hole No Change
+
                 }
 
                 if(Move == '6') {PacMan++;        /** to move Right*/     if(PacMan%10 == 0)      PacMan --; /** Dont cross right border Right*/  }
