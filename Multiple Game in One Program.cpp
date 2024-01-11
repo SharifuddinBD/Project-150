@@ -91,7 +91,7 @@ int main()
 
             New New //New Line
 
-            TabM2 printf("SWITCH CASE NUMBER (0 to 8): \t");
+            TabM2 printf("SWITCH CASE NUMBER (0 to 9): \t");
 
     int mark;
     cin  >>  mark;
@@ -1210,7 +1210,7 @@ int main()
             int Score = 0,Temp=0,i,j,x = 0,Number_of_Enemy=1, Life=3,Level;
             int PacMan,Enemy[Number_of_Enemy];
             char key,Move;
-            char PlayGround[201],Fruit[201];                    /// Playground Size 10*10=100 (0-99) + ghost gulor dhakka khawar por randm possition ja (100 - 199) er moddhe thakbe
+            char PlayGround[111],Fruit[111];                    /// Playground Size 10*10=100 (0-99) + extra 10(just for avoiding silly risk
             //int Enemy[Number_of_Enemy];
 
             cout<< "LEVEL (1-10) :  ";
