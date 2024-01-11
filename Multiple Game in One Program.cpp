@@ -70,7 +70,7 @@ int main()
             char cc=219; //Border Sign
 
         Menu:
-            system("cls");
+            system("cls"); //All Previous Print Erased
             TabM cout << "   MULTIPLE GAME   ";         New New
             TabM2 printf("Press 1,   to Play         TIC TAC TOE(Man vs Com)\n");
             TabM2 printf("Press 2,   to Play         TIC TAC TOE(Man vs Man)\n\n");
@@ -150,9 +150,13 @@ int main()
 
             Print_Loop_ttt_vsc:             //Print_Update
 
-                cout << "\t\t\t\t\t       TIC TAC TOE   \n\n";
+                cout << "\t\t\t\t\t       TIC TAC TOE   \n";
                 cout << "\t\t\t\t\t    [Man vs Computer]\n\n";
-                cout << "\t\t  [Everytime Press Any Key from '1' to '9' For Push Your Symbol in the Box] " << endl << endl;
+                if      (Level== 1) {TabM cout << "EASY LEVEL\n"; }
+                else if (Level== 2) {TabM cout << "MEDIUM LEVEL\n"; }
+                else                {TabM cout << "HARD LEVEL\n"; }
+                New
+                cout << "\t\t[Everytime Press 'Any Intizer Number' from '1' to '9' For Push Your Symbol in the Box] " << endl << endl;
 
 
                 Index_Data[Me]= 1;
@@ -521,7 +525,7 @@ int main()
 
                 cout << "\t\t\t\t\t       TIC TAC TOE   \n\n";
                 cout << "\t\t\t\t\t    [Man vs Computer]\n\n";
-                cout << "\t\t  [Everytime Press Any Key from '1' to '9' For Push Your Symbol in the Box] " << endl << endl;
+                cout << "\t\t[Everytime Press 'Any Intizer Number' from '1' to '9' For Push Your Symbol in the Box] " << endl << endl;
 
                 New
                 TabM   New
@@ -546,10 +550,6 @@ int main()
                 }
 
                 New New
-
-
-
-
 
                 if(Time== 0 && who== 2) goto Player2;
                 if(Time== 0) ;
@@ -668,11 +668,12 @@ int main()
             char PlayGround[109]; //0,1-100,NULL+Primary body Size(5)+Extra some for avoid silly risk
 
             cout << "\t\t\t\t\t\tSNAKE GAME [Classic](10x10)\n\n";
-            cout<<"#Introduction : Here your target is eat more Fruit to Increase Score. The Snake's Size is increasing according to eat Fruit. If the Snake Bites its Body then the Game is Over.If Score=100, then the Game will be Completed. You should Choice Level according to Snake's Speed.Control by Up_Down_Left_Rigt key\n\n";
+            cout<<"#Introduction : Here your target is eat more Fruit to Increase Score. The Snake's Size is increasing according to eat Fruit. If the Snake Bites its Body then the Game is Over.If Score=100, then the Game will be Completed. You should Control the Snake by using Arrow key\n\n";
 
-            cout<< "LEVEL (1-10) :  ";
+            cout<< "SPEED (1-10) :  ";
             cin>>Level;
-            int delay = 500-50*Level;
+            int delay = 500-50*Level; //Speed
+            if  (delay<0) delay=0;
             New New New;
             temp++;
 
@@ -735,16 +736,14 @@ int main()
                 //std::cout << "\r";
                 //std::cout.flush();
 
-                std::this_thread::sleep_for(std::chrono::milliseconds(delay));
-
-
+                std::this_thread::sleep_for(std::chrono::milliseconds(delay));    //Time delay for Update Printing
 
 
                 if(Finish == -1) break; //snake nijeke bite korle game over
 
                 temp++; Change = 0;
 
-                if (kbhit())
+                if (kbhit())           //Control by arrow key
                 {
                         key = getch();
 
@@ -801,16 +800,14 @@ int main()
             }
 
 
-            Move = 1; //Smile Sign
-
             Sound;
-            cout<<"\n\t\t\t\t\t\t\tGame Over!"<<Move<<endl;  New
+            cout<<"\n\t\t\t\t\t\t\tGame Over!"<<endl;  New
 
             if(Score >= 100)         //if snake size is equal to playground size
             {
-                Move = 2;                           //Smile Sign
+                                          //Smile Sign
                 TabM cout<< "\tCongratulation!\n";
-                TabM cout<<"\tLevel Complete!"<<Move;
+                TabM cout<<"\tLevel Complete!";
                 New New
             }
 
@@ -840,11 +837,13 @@ int main()
             char PlayGround[109]; //0,1-100,NULL+Primary body Size(5)+Extra some for avoid silly risk
 
             cout << "\t\t\t\t\t\tSNAKE GAME [Box](10x10)\n\n";
-            cout<<"#Introduction : Here your target is eat more Fruit to Increase Score. The Snake's Size is increasing according to eat Fruit. If the Snake Bites its Body or Border then the Game is Over.If Score=100, then the Game will be Completed. You should Choice Level according to Snake's Speed.\n\n";
+            cout<<"#Introduction : Here your target is eat more Fruit to Increase Score. The Snake's Size is increasing according to eat Fruit. If the Snake Bites its Body or Border then the Game is Over.If Score=100,\
+             then the Game will be Completed. You should use Arrow Keys to control the Snake.\n\n";
 
-            cout<< "LEVEL (1-10) :  ";
+            cout<< "SPEED (1-10) :  ";
             cin>>Level;
             int delay = 500-50*Level;
+            if  (delay<0) delay=0;
             New New New;
             temp++;
 
@@ -970,18 +969,16 @@ int main()
             }
 
 
-            Move= 1; //Smile Sign
 
             Sound
-            if(Finish==-1) cout << "\n\n\t\t\t\t\t\t       TOUCH BODY!";
+            if  (Finish==-1)       cout << "\n\n\t\t\t\t\t\t       TOUCH BODY!";
             else                   cout << "\n\n\t\t\t\t\t\t       TOUCH BORDER!";
-            cout << "\n\t\t\t\t\t\t\tGAME OVER!" << Move << endl;
+            cout << "\n\t\t\t\t\t\t\tGAME OVER!" << endl;
 
             if(Score== 100)
             {
-                Move= 2; //Smile Sign
                 TabM cout <<  "\tCongratulation!\n";
-                TabM cout << "\tLevel Complete!" << Move;
+                TabM cout << "\tLevel Complete!";
                 New New
             }
             Again = Dicission (Kall);
@@ -1609,7 +1606,7 @@ int main()
                             "Current Kill  : "<<Kil<< \
                             "\t   Bullet Spends  : "<< i<< \
                             "\t   Bullet Left  : "<<Bulet-i<< \
-                            "\t   Target Enemy Left  : "<< Enimi-Kil <<endl;
+                            "\t   Targeted Enemy Left  : "<< Enimi-Kil <<endl;
 
                         }
 
@@ -1724,7 +1721,7 @@ int main()
                             "Current Brusted TANK  : "<<Kil<< \
                             "\t   RPJ Spends  : "<< i<< \
                             "\t   RPJ Left  : "<<Bulet-i<< \
-                            "\t   Target TANK Left  : "<< Enimi-Kil <<endl;
+                            "\t   Targeted TANK Left  : "<< Enimi-Kil <<endl;
 
                         }
 
@@ -1799,6 +1796,7 @@ int main()
                             else
                             {
                                 cout<<"Error! Give Correct Input\n\n";
+                                system("cls");
                                 break;
                             }
 
@@ -1831,6 +1829,7 @@ int main()
         cout << "\t\t\t\t\t\t Program is Closed.\n";
         cout << "\t\t\t\t\t\tJajakallahu Khairan.\n\n";
         getch();
+        system("cls");
         return 0;
 
 
@@ -1838,19 +1837,13 @@ int main()
         cout << "\t\t\t\t\t\tError Switching!\n\t\t\t\t\t\tProgram is Closed.\n";
         cout << "\t\t\t\t\t\tJajakallahu Khairan.\n\n";
         getch();
+        system("cls");
         return 0;
     }
 
     goto Menu;
 
 }
-
-
-
-
-
-
-
 
 
 
