@@ -13,8 +13,14 @@
 #define New   cout << "\n";             //New Line
 #define Sound cout << "\a";             // Sound
 
-#define BrdrM for(int i=0;i<21;i++) cout<<cc;       //playground border design
-#define Brdr cout<<cc;
+#define BrdrM for(int i=0;i<11;i++) cout<<"o ";       //playground border design
+#define Brdr cout<<"o ";
+
+#define BrdrMd for(int i=0;i<11;i++) cout<<". ";       //playground border design
+#define Brdrd cout<<". ";
+
+#define BrdrMb for(int i=0;i<21;i++) cout<<cc;       //playground border design
+#define Brdrb cout<<cc;
 
 #define show        cout << "\tScore : " << Score << endl << endl;
 #define showScore   cout << "\tScore : " << Score << endl;
@@ -78,8 +84,9 @@ int main()
             TabM2 printf("Press 4,   to Play            SNAKE GAME (  Box  )\n\n");
             TabM2 printf("Press 5,   to Play        SNAKE-LUDO (vs Computer)\n");
             TabM2 printf("Press 6,   to Play        SNAKE-LUDO (MultiPlayer)\n\n");
-            TabM2 printf("Press 7,   to Play                         SUDOKU\n");
-            TabM2 printf("Press 8,   to Play                     Mini GAMES\n\n");
+            TabM2 printf("Press 7,   to Play                    Pacman Lite\n");
+            TabM2 printf("Press 8,   to Play                         SUDOKU\n\n");
+            TabM2 printf("Press 9,   to Play                     Mini GAMES\n");
             TabM2 printf("Press 0,   to CLOSE                   THE PROGRAM\n\n");                //Introduction end
 
             New New //New Line
@@ -672,7 +679,7 @@ int main()
 
             cout<< "SPEED (1-10) :  ";
             cin>>Level;
-            int delay = 500-50*Level; //Speed
+            int delay = 501-50*Level; //Speed
             if  (delay<0) delay=0;
             New New New;
             temp++;
@@ -720,24 +727,20 @@ int main()
                 cout << "\t\t\t\t\t\t      Level : "<<Level<<endl;
 
                 New;New;New;New;New;New;
-                TabM;  Brdr;  BrdrM;  New;  //Border
-                TabM;  Brdr;
+                TabM;  Brdrd;  BrdrMd;  New;  //Border
+                TabM;  Brdrd;
 
                 for(i = 1; i <= 100; i++)
                 {
                    std:cout<<PlayGround [i]<<" ";           // show Update resulte of Game-PlayGround
-                   if(i%10 == 0) {Brdr;  New;  TabM;  Brdr;  }
+                   if(i%10 == 0) {Brdrd;  New;  TabM;  Brdrd;  }
                 }
 
-                BrdrM New New
+                BrdrMd New New
 
                 TabM show       //Show Score
 
-                //std::cout << "\r";
-                //std::cout.flush();
-
                 std::this_thread::sleep_for(std::chrono::milliseconds(delay));    //Time delay for Update Printing
-
 
                 if(Finish == -1) break; //snake nijeke bite korle game over
 
@@ -828,7 +831,7 @@ int main()
         //Sudhu Parthokko ei jaygay je Snake er Body er pashapashi Border e touch lagleo Game over hobe.
         //Tai Comment khub ekta beshi add korsi na, karon beshir vag comment-e purboborti Snake Classic a add kora hoyeche
 
-            while(1)
+        while(1)
         {
             int Fruit,Score = 0,temp,Finish=0,Call,Change,i,x = 0,Level;
             int Snake_Head = 46;    //snake head initial possition
@@ -842,7 +845,7 @@ int main()
 
             cout<< "SPEED (1-10) :  ";
             cin>>Level;
-            int delay = 500-50*Level;
+            int delay = 501-50*Level;
             if  (delay<0) delay=0;
             New New New;
             temp++;
@@ -890,16 +893,16 @@ int main()
                 cout << "\t\t\t\t\t\t      Level : "<<Level<<endl;
 
                 New;New;New;New;New;New;
-                TabM;  Brdr;  BrdrM;  New;  //Border
-                TabM;  Brdr;
+                TabM;  Brdrb;  BrdrMb;  New;  //Border
+                TabM;  Brdrb;
 
                 for(i = 1; i <= 100; i++)
                 {
                    cout<<PlayGround [i]<<" ";           // show Update resulte of Game-PlayGround
-                   if(i%10 == 0) {Brdr;  New;  TabM;  Brdr;  }
+                   if(i%10 == 0) {Brdrb;  New;  TabM;  Brdrb;  }
                 }
 
-                BrdrM New New
+                BrdrMb New New
 
                 TabM show       //Show Score
 
@@ -935,7 +938,7 @@ int main()
                         else continue;
                 }
 
-                if(Move == '5' || Move == '0') continue; //no change
+//                if(Move == '5' || Move == '0') continue; //no change
 
                 for(i = 3+Score; i>0; i--)
                 {
@@ -988,15 +991,15 @@ int main()
 
     case 5: //Ludo Snake-Ladder (vs Computer)
 
-/*
-      Here There are 2 Player (I & Computer). Both Target is to reach 100.
-      Who Reach to 100 Firstly, He is Winner.
-      Every Time We Hit Dice. & The Dice Give us Value from 1 to 6.
-      Ladder Help us to Increase our Possition & Snake Decrease our Possition.
-*/
+    /*
+          Here There are 2 Player (I & Computer). Both Target is to reach 100.
+          Who Reach to 100 Firstly, He is Winner.
+          Every Time We Hit Dice. & The Dice Give us Value from 1 to 6.
+          Ladder Help us to Increase our Possition & Snake Decrease our Possition.
+    */
 
-    New TabM cout << " LUDO SNAKE-LADDER GAME"; New New
-    cout<<"#INTRODUCTION: Here There are 2 Player (You & Computer) are playing. Both Target is to reach 100. Every Time You should Hit Dice & The Dice Give you Value from 1 to 6. Ladder Help us to Increase Your Possition & Snake Decrease Your Possition. The Player, Who reach to 100 first, He is Winner. To Hit Dice Press Any-Key Everytime.\n\n\n";
+        New TabM cout << " LUDO SNAKE-LADDER GAME"; New New
+        cout<<"#INTRODUCTION: Here There are 2 Player (You & Computer) are playing. Both Target is to reach 100. Every Time You should Hit Dice & The Dice Give you Value from 1 to 6. Ladder Help us to Increase Your Possition & Snake Decrease Your Possition. The Player, Who reach to 100 first, He is Winner. To Hit Dice Press Any-Key Everytime.\n\n\n";
         while(1)
         {
             int You= 0, Com= 0;
@@ -1198,9 +1201,173 @@ int main()
         break;
 
 
+    case 7:
+        while(1)
+        {
+            cout << "\t\t\t\t\t\tPACMAN GAME (10x10)\n\n";
+            cout << "#Introduction: Here Pacman's Target is Eat All Fruit in the Box and Save Himself from Ghost. Ghost is Always try to catch Pacman. If Ghost Catch Pacman then Pacman's Life will Decreased. Use Arrow Keys for Moving. Pacman has 3 Life. If Pacman lost his all life then Game is over. If PacMan Eat all fruit in the Box then Level will be Completed.\n\n";
+
+            int Score = 0,Temp=0,i,j,x = 0,Number_of_Enemy=1, Life=3,Level;
+            int PacMan,Enemy[Number_of_Enemy];
+            char key,Move;
+            char PlayGround[201],Fruit[201];                    /// Playground Size 10*10=100 (0-99) + ghost gulor dhakka khawar por randm possition ja (100 - 199) er moddhe thakbe
+            //int Enemy[Number_of_Enemy];
+
+            cout<< "LEVEL (1-10) :  ";
+            cin>>Level;
+            int delay = 501-50*Level;
+            New New New;
 
 
-    case 7: //Sudoku (Fixed Given Value)
+            for(i = 0; i < 100; i++)                            ///Initially sob gulo ghorei dot dekhabe
+            {
+                Fruit[i]=1;                                     ///'1' indicate korse oi possition a fruit ache
+            }
+
+            pac_start:                                          ///if Pacman Lost his a Life then Program Start from here
+
+
+            Enemy[0]=0;
+            PacMan = 99;                                    ///Pacman er initial possition
+            Temp=0;
+
+
+            while(1)                                        ///Protibar Move korar por Program ekhane chole asbe
+            {
+                system("cls");
+
+                for(i = 0; i < 100; i++)
+                {
+                    PlayGround[i] = ' ';
+                }
+
+                for(i = 0; i < 100; i++)
+                {
+                    if(Fruit[i] == 1) PlayGround[i] = '.';          ///jodi Fruit thake tobe Dot Sign dekhabe
+                }
+
+                PlayGround[PacMan] = 'P';                         ///PacMan Symbol (Smile face Black)
+
+                for(i=0;i<Number_of_Enemy;i++)
+                {
+                    PlayGround[Enemy[i]] = 'G';                   ///Enemy Symbol (Smile face White)
+                }
+
+                TabM cout << "PACMAN GAME \n\n";
+                TabM cout << " Level : "<<Level<<endl;
+
+                New;New;New;New;New;New;
+                TabM;  Brdr;  BrdrM;  New;  //Border
+                TabM;  Brdr;
+
+                for(i = 0; i < 100; i++)
+                {
+                   cout<<PlayGround[i]<<" ";                    ///Print PlayGround
+                   if(i%10 == 9) {Brdr;  New;  TabM;  Brdr;  }  ///proti 10 ghor por por New line asbe (jehutu Column 10 ta)
+                }
+
+                BrdrM New New
+
+                TabM showScore                  ///Show Current Score
+                TabM showLife                   ///Show Pacman remaining Life
+
+                std::this_thread::sleep_for(std::chrono::milliseconds(delay));
+
+
+                if(Life == 0)       break;              ///Remaining Life '0' hole Game Over
+                if(Score == 100)    break;              ///Sob fruit gulo khele Game Over & Highest Score hobe
+                if(Temp == -1)      goto pac_start;     ///jodi pacman er life kome jay, tobe sobar possition reform hobe
+
+
+                for(i=0;i<Number_of_Enemy;i++)
+                {
+                    if      (Enemy[i] /10 - PacMan/10 > 0) Enemy[i] -=10; ///Jodi Ghost er RowNumber Amar RowNumber theke BESHI hoy, tobe tar RowNumber Kombe & Amar Nikote asbe
+                    else if (Enemy[i] /10 - PacMan/10 < 0) Enemy[i] +=10; ///Jodi Ghost er RowNumber Amar RowNumber theke KOM   hoy, tobe tar RowNumber Barbe & Amar Nikote asbe
+                                                                          ///R Same RowNumber hole No Change
+
+                    if      (Enemy[i] %10 - PacMan%10 > 0) Enemy[i] --;   ///Jodi Ghost er Column Number Amar Column Number theke BESHI hoy,tobe tar Column Number Kombe & Amar Nikote asbe
+                    else if (Enemy[i] %10 - PacMan%10 < 0) Enemy[i] ++;   ///Jodi Ghost er Column Number Amar Column Number theke  KOM  hoy,tobe tar Column Number Barbe & Amar Nikote asbe
+                                                                          ///R Same Column Number hole No Change
+
+    //                if(Enemy[i] /10 - PacMan/10 > Enemy[i] %10 - PacMan%10)
+                }
+
+                if (kbhit())
+                {
+                            key = getch();
+
+                        // Check for arrow key input
+                            if(key==72) // Up arrow
+
+                                Move='8';
+
+                            else if(key==80)// Down arrow
+
+                                Move='2';
+
+                            else if(key==75) // Left arrow
+
+                                Move='4';
+
+                            else if(key==77) // Right arrow
+                                Move='6';
+
+                            else continue;
+                }
+
+                if(Move == '6') {PacMan++;        /** to move Right*/     if(PacMan%10 == 0)      PacMan --; /** Dont cross right border Right*/  }
+                if(Move == '4') {PacMan--;        /** to move Left */     if((PacMan+20)%10 == 9) PacMan ++; /** Dont cross right border Right*/  } ///'-' Value Avoiding er jonno +20 dichi
+                if(Move == '2') {PacMan += 10; }  /**to move Down  */
+                if(Move == '8') {PacMan -= 10; }  /**to move Up    */
+
+                if(PacMan >= 100) PacMan -= 10; ///Don't cross Down-Border
+                if(PacMan <  0) PacMan += 10;   ///Don't cross Upper-Border
+
+                for(i=0; i<100; i++)
+                {
+                    if(PacMan == i && Fruit[i] == 1)/// jodi Pacman er position-a fruit thake -
+                    {
+                        Score++;                    /// - tobe Score 1 barbe
+                        Fruit[i]=0;                 /// & Fruit ta delete hoye jabe
+                    }
+                }
+
+                for(i=0;i<Number_of_Enemy;i++)
+                {
+                    if(PacMan == Enemy[i] )     /// jodi Ghost Pacman er body touch kore-
+                    {
+                        Temp = -1;
+                        Life --;                /// -tobe Life kome jabe
+                        break;
+                    }
+                }
+
+
+            }
+
+
+
+            if(Life==0)
+            {
+
+                Sound;
+                cout<<"\n\t\t\t\t\t\t\tGame Over!"<<"\n\t\t\t\t\t\t\tScore : "<<Score<<endl;  New
+            }
+
+            if(Score == 100)
+            {
+                Sound
+                TabM cout<< "\tCongratulation!\n";
+                TabM cout<<"\tLevel Complete!"; //100 is highest score , because there are 100 fruit in the ground
+                New New
+            }
+
+            Again = Dicission (Kall);
+            if(Again!= "1") goto Menu;
+        }
+
+
+    case 8: //Sudoku (Fixed Given Value)
 
 /*
         Here We should Fill up All of the Blank Space properly (according to
@@ -1553,7 +1720,7 @@ int main()
         }
         break;
 
-    case 8:
+    case 9:
 
         while(1)
         {
