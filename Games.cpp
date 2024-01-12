@@ -777,7 +777,7 @@ int main()
                 }
                 Snake_Body[1] =  Snake_Head;
 
-                //to move to up / down / left / right / cross (below) - (According to Key-board Numarical Pads)
+                //to move to up / down / left / right (below) - (According to Key-board Numarical Pads)
                 if(Move == '6') {Snake_Head++;     /** to move Right */  if(Snake_Head%10 == 1) Snake_Head -= 10; /**Dan dike ber hoye gele oi borabor Bam dik diye asbe */ }
                 if(Move == '4') {Snake_Head--;     /** to move Down  */  if(Snake_Head%10 == 0) Snake_Head += 10; /**Bam dike ber hoye gele oi borabor Dan dik diye asbe */}
                 if(Move == '2') {Snake_Head += 10; /** to move Down  */   }
@@ -794,7 +794,7 @@ int main()
                 if(Snake_Head == Fruit)         //Snake Fruit eat korar sathe sathe -
                 {
                     Score++;                    //-Score barbe
-                    if(Score == 97) Score += 3; //Highest point 100 korar jonno;   //ekhane 4 holo snake er initial body size (not so necessary)
+                    if(Score == 97) Score += 3; //Highest point 100 korar jonno;   //ekhane 3 holo snake er initial body size (not so necessary)
                     Sound                       //-Sound hobe
                     Fruit =  Randam_Function_100(Call);     // -fruit er possition change hobe
 
@@ -946,7 +946,7 @@ int main()
                 }
                 Snake_Body[1] =  Snake_Head;
 
-                //Move to up/down/left/right/cross Moving (below)
+                //Move to up/down/left/right Moving (below)
                 if(Move== '6') {Snake_Head++;      if(Snake_Head%10== 1)  { Snake_Head= 0; continue; }}      //Box e touch lagle Game over
                 if(Move== '4') {Snake_Head--;      if(Snake_Head%10== 0)  { Snake_Head= 0; continue; }}      // " " "
                 if(Move== '8') {Snake_Head -= 10;    }
@@ -963,7 +963,7 @@ int main()
                 if(Snake_Head == Fruit)         //Snake Fruit eat korar sathe sathe -
                 {
                     Score++;                    //-Score barbe
-                    if(Score == 97) Score += 3; //Highest point 100 korar jonno;   //ekhane 4 holo snake er initial body size (not so necessary)
+                    if(Score == 97) Score += 3; //Highest point 100 korar jonno;   //ekhane 3 holo snake er initial body size (not so necessary)
                     Sound                       //-Sound hobe
                     Fruit =  Randam_Function_100(Call);     // -fruit er possition change hobe
 
