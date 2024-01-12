@@ -77,7 +77,7 @@ int main()
 
         Menu:
             system("cls"); //All Previous Print Erased
-            TabM cout << "   MULTIPLE GAME   ";         New New
+            TabM cout << "   MULTIPLE GAMES   ";         New New
             TabM2 printf("Press 1,   to Play         TIC TAC TOE(Man vs Com)\n");
             TabM2 printf("Press 2,   to Play         TIC TAC TOE(Man vs Man)\n\n");
             TabM2 printf("Press 3,   to Play            SNAKE GAME (Classic)\n");
