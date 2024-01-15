@@ -668,7 +668,7 @@ int main()
 */
         while(1)
         {
-            int Fruit,Score = 0,temp,Finish=0,Call,Change,i,x = 0,Level;
+            int Fruit,Score = 0,temp,Finish=0,Call,Change,i,x = 0; float Level;
             int Snake_Head = 46;    //snake head initial possition
             int Snake_Body[108] = {0}; //0,1-100,Primary body Size(5)+Extra some for avoid silly risk
             char key,Move='6';
@@ -679,7 +679,7 @@ int main()
 
             cout<< "SPEED (1-10) :  ";
             cin>>Level;
-            int delay = 501-50*Level; //Speed
+            int delay = 1000-100*Level; //Speed
             if  (delay<0) delay=0;
             New New New;
             temp++;
@@ -833,7 +833,7 @@ int main()
 
         while(1)
         {
-            int Fruit,Score = 0,temp,Finish=0,Call,Change,i,x = 0,Level;
+            int Fruit,Score = 0,temp,Finish=0,Call,Change,i,x = 0; float Level;
             int Snake_Head = 46;    //snake head initial possition
             int Snake_Body[108] = {0}; //0,1-100,Primary body Size(5)+Extra some for avoid silly risk
             char key,Move='6';
@@ -845,7 +845,7 @@ int main()
 
             cout<< "SPEED (1-10) :  ";
             cin>>Level;
-            int delay = 501-50*Level;
+            int delay = 1000-100*Level;
             if  (delay<0) delay=0;
             New New New;
             temp++;
@@ -1207,7 +1207,7 @@ int main()
             cout << "\t\t\t\t\t\tPACMAN GAME (10x10)\n\n";
             cout << "#Introduction: Here Pacman's Target is Eat All Fruit in the Box and Save Himself from Ghost. Ghost is Always try to catch Pacman. If Ghost Catch Pacman then Pacman's Life will Decreased. Use Arrow Keys for Moving. Pacman has 3 Life. If Pacman lost his all life then Game is over. If PacMan Eat all fruit in the Box then Level will be Completed.\n\n";
 
-            int Score = 0,Temp=0,i,j,x = 0,Number_of_Enemy=1, Life=3,Level;
+            int Score = 0,Temp=0,i,j,x = 0,Number_of_Enemy=1, Life=3; float Level;
             int PacMan,Enemy[Number_of_Enemy];
             char key,Move;
             char PlayGround[111],Fruit[111];                    /// Playground Size 10*10=100 (0-99) + extra 10(just for avoiding silly risk
@@ -1215,7 +1215,7 @@ int main()
 
             cout<< "LEVEL (1-10) :  ";
             cin>>Level;
-            int delay = 501-50*Level;
+            int delay = 1000-100*Level;
             New New New;
 
 
